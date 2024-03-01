@@ -18,15 +18,23 @@ const UsersPage = async () => {
   return (
     <>
       <h1>Users</h1>
-      <p>{ new Date().toLocaleTimeString() }</p>
-      <ul>
-        {users.map((user: User) => (
-          <li key={user.id}>
-            <h2>{user.name}</h2>
-            <p>{user.email}</p>
-          </li>
-        ))}
-      </ul>
+      <p>{new Date().toLocaleTimeString()}</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          {users.map((user: User) => (
+            <tr key={user.id}>
+              <td>{user.name}</td>
+              <td>{user.email}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </>
   );
 };

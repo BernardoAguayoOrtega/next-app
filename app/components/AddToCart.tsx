@@ -4,7 +4,7 @@ import React from "react";
 function AddToCart() {
   return (
     <>
-      <button onClick={() => {}}>Add to Cart</button>
+      <button className="btn btn-primary " onClick={() => {}}>Add to Cart</button>
     </>
   );
 }
