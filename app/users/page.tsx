@@ -19,7 +19,7 @@ const UsersPage = async () => {
     <>
       <h1>Users</h1>
       <p>{new Date().toLocaleTimeString()}</p>
-      <table>
+      <table className="table table-border">
         <thead>
           <tr>
             <th>Name</th>
