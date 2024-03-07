@@ -4,8 +4,7 @@ export default function GeneralLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div>
-      <h1>Hello Root Layout General</h1>
+    <div className='flex flex-col items-center p-24  bg-gradient-to-r from-indigo-100'>
       {children}
     </div>
   );
