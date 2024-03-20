@@ -4,4 +4,5 @@
 
 .active-link {
   @apply text-blue-500;
+  font-weight: bold;
 }
