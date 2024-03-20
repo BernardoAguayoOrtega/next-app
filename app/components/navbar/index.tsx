@@ -1,4 +1,4 @@
-import { HomeIcon, InfoIcon, MailIcon, CommentIcon } from "@primer/octicons-react";
+import { HomeIcon, InfoIcon, CommentDiscussionIcon, CreditCardIcon } from "@primer/octicons-react";
 import ActiveLink from "../active-link";
 
 type navbarItem = {
@@ -10,8 +10,8 @@ type navbarItem = {
 const navbarItems: navbarItem[] = [
   { path: "/", label: "Home", icon: <HomeIcon size={24} /> },
   { path: "/about", label: "About", icon: <InfoIcon size={24} /> },
-  { path: "/contact", label: "Contact", icon: <MailIcon size={24} /> },
-  { path: "/pricing", label: "Pricing", icon: <CommentIcon size={24} /> },
+  { path: "/contact", label: "Contact", icon: <CommentDiscussionIcon size={24} /> },
+  { path: "/pricing", label: "Pricing", icon: <CreditCardIcon size={24} /> },
 ];
 
 type Props = {};
