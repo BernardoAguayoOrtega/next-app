@@ -9,7 +9,7 @@ type navbarItem = {
 
 const navbarItems: navbarItem[] = [
   { ref: "/", label: "Home", icon: <HomeIcon size={24} /> },
-  { ref: "/about", label: "About" },
+  { ref: "/about", label: "About", },
   { ref: "/contact", label: "Contact" },
   { ref: "/pricing", label: "Pricing" },
 ];
