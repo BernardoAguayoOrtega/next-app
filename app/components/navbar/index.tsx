@@ -1,17 +1,18 @@
 import { HomeIcon } from "@primer/octicons-react";
 import Link from "next/link";
+import ActiveLink from "../active-link";
 
 type navbarItem = {
-  ref: string;
+  path: string;
   label: string;
   icon?: React.ReactNode;
 };
 
 const navbarItems: navbarItem[] = [
-  { ref: "/", label: "Home", icon: <HomeIcon size={24} /> },
-  { ref: "/about", label: "About", },
-  { ref: "/contact", label: "Contact" },
-  { ref: "/pricing", label: "Pricing" },
+  { path: "/", label: "Home", icon: <HomeIcon size={24} /> },
+  { path: "/about", label: "About" },
+  { path: "/contact", label: "Contact" },
+  { path: "/pricing", label: "Pricing" },
 ];
 
 type Props = {};
@@ -21,13 +22,13 @@ export function Navbar({}: Props) {
     <nav className='flex bg-blue-100 bg-opacity-30 p-2 m-2 rounded'>
       <ul className='flex space-x-6'>
         {navbarItems.map((item) => (
-          <li key={item.ref}>
-            <Link href={item.ref}>
-              <span className='flex items-center space-x-2'>
-                {item.icon}
-                <span>{item.label}</span>
-              </span>
-            </Link>
+          <li key={item.path}>
+            <ActiveLink
+              key={item.path}
+              label={item.label}
+              path={item.path}
+              icon={item.icon}
+            />
           </li>
         ))}
       </ul>
