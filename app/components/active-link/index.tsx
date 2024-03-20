@@ -1,4 +1,8 @@
+"use client"
+
 import Link from "next/link";
+import styles from "./styles.module.css";
+import { usePathname } from "next/navigation";
 
 type ActiveLinkProps = {
   path: string;
@@ -7,8 +11,13 @@ type ActiveLinkProps = {
 };
 
 function ActiveLink(props: ActiveLinkProps) {
+  const pathName = usePathname();
+  const isActive: boolean = props.path === pathName;
+
   return (
-    <Link href={props.path}>
+    <Link
+      className={`${styles["link"]} ${isActive ? styles["active-link"] : ""}`}
+      href={props.path}>
       <span className='flex items-center space-x-2'>
         {props.icon}
         <span>{props.label}</span>
